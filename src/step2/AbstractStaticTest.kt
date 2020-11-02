@@ -8,9 +8,9 @@ fun main(args: Array<String>) {
     obj2.abstractFunc()
 
     // static
-    println(TestAbstractImp.staticVar);
-    TestAbstractImp.staticFunc()
-    println(TestAbstractImp.execFun)
+    println(StaticClass.staticVar);
+    StaticClass.staticFunc()
+    println(StaticClass.execFun)
 
 }
 
@@ -23,6 +23,10 @@ abstract class TestAbstract {
 class TestAbstractImp : TestAbstract() {
     override fun abstractFunc() = println("TestAbstractImp abstractFunc")
 
+
+}
+
+class StaticClass {
     // companion object {} 안에서 구현해야 static 가능
     companion object {
         var staticVar = "companion staticVar!"
