@@ -17,6 +17,8 @@ fun main(args: Array<String>) {
     println(addByTen())
     println(addByTen())
 
+    println(test(1)())
+
 
 }
 
@@ -34,5 +36,13 @@ fun closure2(pFunc: (Int) -> Int): () -> Int {
     return {
         result = pFunc(result)
         result
+    }
+}
+
+fun test(num: Int): () -> Int {
+    var str = "testString"
+    return {
+        str += num.toString()
+        123
     }
 }
